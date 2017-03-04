@@ -6,11 +6,19 @@ use \Illuminate\Support\ServiceProvider;
 
 class LavachartsShowcaseServiceProvider extends ServiceProvider
 {
+    const ROUTES = __DIR__.'/../routes.php';
+
+    const VIEWS = __DIR__.'/../views';
+
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__.'/../routes.php');
+        if (method_exists($this, 'loadRoutesFrom')) {
+            $this->loadRoutesFrom(self::ROUTES);
+        } else {
+            require self::ROUTES;
+        }
 
-        $this->loadViewsFrom(__DIR__.'/../views', 'lavacharts');
+        $this->loadViewsFrom(self::VIEWS, 'lavacharts');
     }
 
     public function register()

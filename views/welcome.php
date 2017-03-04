@@ -1,12 +1,49 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Lavacharts</title>
+        <title>Lavacharts Showcase</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+
+        <style>
+            html, body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                display: table;
+                font-weight: 100;
+                font-family: 'Lato', sans-serif;
+            }
+
+            .container {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .content {
+                text-align: center;
+                display: inline-block;
+            }
+
+            .title {
+                font-size: 96px;
+            }
+        </style>
     </head>
     <body>
-        <div>
-            <h1>Lavacharts</h1>
-            <p>It works</p>
-            <?= microtime(); ?>
+        <div class="container">
+            <div class="content">
+                <div class="title">
+                    Charts Showcase<br />
+                    Lavacharts <?= $lavacharts_version; ?><br />
+                    Laravel <?= $laravel_version; ?>
+                </div>
+            </div>
         </div>
     </body>
 </html>
