@@ -1,14 +1,19 @@
 <?php
 
-use \Khill\Lavacharts\Lavacharts;
+\Route::group([
+    'prefix' => 'lavacharts',
+    'namespace' => '\Khill\Lavacharts\Laravel\Showcase',
+], function() {
 
-\Route::group(['prefix' => 'lavacharts'], function() {
-
-    \Route::get('/', function () {
-        return view('lavacharts::welcome', [
-            'laravel_version' => app()::VERSION,
-            'lavacharts_version' => Lavacharts::VERSION
-        ]);
+    \Route::get('/', function() {
+        return \View::make('lavacharts::welcome');
     });
+
+    \Route::get('/demos', function() {
+        return \View::make('lavacharts::demos');
+    });
+
+    \Route::get('/example/chart/{type}', 'LavachartsShowcaseController@showChart');
+    \Route::get('/example/dashboard/{type}', 'LavachartsShowcaseController@showDashboard');
 
 });
