@@ -40,8 +40,8 @@
             <div class="content">
                 <div class="title">
                     Charts Showcase<br />
-                    Lavacharts <?= $lavacharts_version; ?><br />
-                    Laravel <?= $laravel_version; ?>
+                    Lavacharts <?= $versions['lavacharts']; ?><br />
+                    Laravel <?= $versions['laravel']; ?>
                 </div>
             </div>
         </div>

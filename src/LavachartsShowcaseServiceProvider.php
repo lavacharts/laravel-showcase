@@ -19,6 +19,14 @@ class LavachartsShowcaseServiceProvider extends ServiceProvider
         }
 
         $this->loadViewsFrom(self::VIEWS, 'lavacharts');
+
+
+        \View::composer('*', function ($view) {
+            return $view->with('versions', [
+                'laravel'    => app()::VERSION,
+                'lavacharts' => app('lavacharts')::VERSION,
+            ]);
+        });
     }
 
     public function register()
