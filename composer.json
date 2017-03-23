@@ -1,6 +1,6 @@
 {
-    "name": "kevin/lavacharts-laravel-showcase",
-    "description": "Demo pages and charts for testing in Laravel",
+    "name": "lavacharts/laravel-showcase",
+    "description": "Examples of charts and dashboards in Laravel",
     "type": "metapackage",
     "license": "MIT",
     "authors": [
@@ -9,6 +9,10 @@
             "email": "kevinkhill@gmail.com"
         }
     ],
+    "require" : {
+        "khill/lavacharts": "*",
+        "laravel/laravel": "^5.2"
+    },
     "autoload": {
         "psr-4": {
             "Khill\\Lavacharts\\Laravel\\Showcase\\": "../../../php/lavacharts-laravel-showcase/src"
