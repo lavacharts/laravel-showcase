@@ -1,5 +1,5 @@
 <?php
-    $data = $lava->DataTable();
+    $data = \Lava::DataTable();
     $data->addColumn('string', 'From')
          ->addColumn('string', 'To')
          ->addColumn('number', 'Weight')
@@ -14,9 +14,7 @@
 
     $colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f', '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
 
-    $lava->SankeyChart($title, $data, [
-        'width' => $width,
-        'height' => $height,
+    \Lava::SankeyChart($title, $data, [
         'legend' => [
             'position' => 'none'
         ],

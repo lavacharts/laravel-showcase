@@ -1,5 +1,5 @@
 <?php
-    $data = $lava->DataTable();
+    $data = \Lava::DataTable();
     $data->addNumberColumn('Age')
          ->addNumberColumn('Weight');
 
@@ -7,10 +7,8 @@
         $data->addRow([rand(20, 40), rand(100, 300)]);
     }
 
-    $lava->ScatterChart($title, $data, [
+    \Lava::ScatterChart($title, $data, [
         'title' => 'Age vs. Weight comparison',
-        'width' => $width,
-        'height' => $height,
         'hAxis' => [
             'title' => 'Age',
             'minValue' => 20,

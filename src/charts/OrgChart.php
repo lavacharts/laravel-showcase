@@ -1,5 +1,5 @@
 <?php
-    $employees = $lava->DataTable();
+    $employees = \Lava::DataTable();
     $employees->addColumns([
         ['string', 'Name'],
         ['string', 'Manager'],
@@ -14,11 +14,9 @@
         ['Carol', 'Bob', '']
     ]);
 
-    $lava->OrgChart($title, $employees, [
+    \Lava::OrgChart($title, $employees, [
         'title' => 'Company Performance',
         'allowHtml' => true,
-        'width' => $width,
-        'height' => $height,
         'titleTextStyle' => [
             'color' => '#eb6b2c',
             'fontSize' => 14

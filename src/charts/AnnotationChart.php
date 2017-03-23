@@ -1,5 +1,5 @@
 <?php
-    $data = $lava->DataTable();
+    $data = \Lava::DataTable();
     $data->addColumns([
         ['date',   'Date'],
         ['number', 'Kepler-22b mission'],
@@ -23,6 +23,6 @@
                                   79463, 'Gallantors', 'Omniscience achieved']
         ]);
 
-    $lava->AnnotationChart($title, $data, [
+    \Lava::AnnotationChart($title, $data, [
         'displayAnnotations' => true
     ]);

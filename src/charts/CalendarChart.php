@@ -1,5 +1,5 @@
 <?php
-    $sales = $lava->DataTable();
+    $sales = \Lava::DataTable();
     $sales->addDateColumn('Date')
           ->addNumberColumn('Orders');
 
@@ -10,10 +10,8 @@
         }
     }
 
-    $lava->CalendarChart($title, $sales, [
+    \Lava::CalendarChart($title, $sales, [
         'title' => 'Cars Sold',
-        'width' => $width,
-        'height' => $height,
         'unusedMonthOutlineColor' => [
             'stroke'        => '#ECECEC',
             'strokeOpacity' => 0.75,

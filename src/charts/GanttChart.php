@@ -26,6 +26,6 @@
          null, '2015-1-6', $daysToMilliseconds(1), 100, 'Research']
     ]);
 
-    $lava->GanttChart($title, $data, [
+    \Lava::GanttChart($title, $data, [
         'height' => 275
     ]);

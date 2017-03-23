@@ -33,7 +33,7 @@
         ['Velociraptor (swift robber)', 1.8]
     ]);
 
-    $lava->HistogramChart($title, $data, [
+    \Lava::HistogramChart($title, $data, [
         'title' => 'Lengths of dinosaurs, in meters',
         'legend' => 'none'
     ]);

@@ -12,10 +12,8 @@
         ['James Hawes (2008)',      4.4, 6.2]
     ]);
 
-    $lava->SteppedAreaChart($title, $data, [
+    \Lava::SteppedAreaChart($title, $data, [
         'title' => 'The decline of \'The 39 Steps\'',
-        'width' => $width,
-        'height' => $height,
         'vAxis' => [
             'title' => 'Accumulated Rating'
         ],

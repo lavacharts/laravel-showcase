@@ -1,7 +1,7 @@
 <?php
     use Carbon\Carbon;
 
-    $data = $lava->DataTable();
+    $data = \Lava::DataTable();
     $data->addStringColumn('Room');
     $data->addStringColumn('Name');
     $data->addDateColumn('Start');
@@ -16,10 +16,8 @@
     ]);
 
 
-    $lava->TimelineChart($title, $data, [
+    \Lava::TimelineChart($title, $data, [
         'title' => 'Classes',
-        'width' => $width,
-        'height' => $height,
         'timeline' => [
             'colorByRowLabel' => true
         ]

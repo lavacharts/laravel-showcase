@@ -1,17 +1,21 @@
 <?php
-    $data = $lava->DataTable();
-    $data->addDateColumn('Date')
-         ->addNumberColumn('Thing 1')
-         ->addNumberColumn('Thing 2');
+    $data = \Lava::DataTable();
+    $data->setDateTimeFormat('Y')
+         ->addDateColumn('Year')
+         ->addNumberColumn('Sales')
+         ->addNumberColumn('Expenses')
+         ->addRows([
+            ['2012', 750, 700],
+            ['2013', 900, 400],
+            ['2014', 1170, 460],
+            ['2015', 660,  1120],
+            ['2016', 1030, 540]
+        ]);
 
-    for ($a=1;$a<30;$a++) {
-        $data->addRow(['2017-1-'.$a, rand(100,200), rand(100,200)]);
-    }
-
-    $lava->AreaChart($title, $data, [
-        'width' => $width,
-        'height' => $height,
-        'legend' => 'none',
+    \Lava::AreaChart($title, $data, [
+        'legend' => [
+            'position' => 'inner'
+        ],
         'chartArea'=> [
             'left' => 50,
             'width' => '90%'

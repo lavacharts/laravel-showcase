@@ -23,9 +23,7 @@
         ['cats eat mice']
     ]);
 
-    $lava->WordTreeChart($title, $data, [
-        'width' => $width,
-        'height' => $height,
+    \Lava::WordTreeChart($title, $data, [
         'wordtree' => [
             'format' => 'implicit',
             'word' => 'cats'

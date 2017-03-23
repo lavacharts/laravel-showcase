@@ -15,7 +15,7 @@
         ['USA',    78.09,              2.05,      'North America',  307007000]
     ]);
 
-    $lava->BubbleChart($title, $data, [
+    \Lava::BubbleChart($title, $data, [
         'width' => 400,
         'height' => 400,
         'chartArea' => ['width' => 400],

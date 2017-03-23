@@ -20,6 +20,9 @@ class LavachartsShowcaseServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(self::VIEWS, 'lavacharts');
 
+        $this->publishes([
+            __DIR__.'/../public' => public_path('vendor/khill/lavacharts/laravel-showcase'),
+        ], 'public');
 
         \View::composer('*', function ($view) {
             return $view->with('versions', [

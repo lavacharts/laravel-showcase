@@ -10,7 +10,7 @@
         // Treat first row as data as well.
     ], true);
 
-    $lava->CandlestickChart($title, $data, [
+    \Lava::CandlestickChart($title, $data, [
         'legend' => 'none',
         'height' => 400
     ]);

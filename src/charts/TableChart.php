@@ -1,5 +1,5 @@
 <?php
-    $data = $lava->DataTable();
+    $data = \Lava::DataTable();
     $data->addDateColumn('Month')
          ->addNumberColumn('Donuts Sold')
          ->addRoleColumn('number', 'interval')
@@ -12,7 +12,7 @@
              ['2015-4-1', 1030, null, null,  540]
          ]);
 
-    $lava->TableChart($title, $data, [
+    \Lava::TableChart($title, $data, [
         'width' => $width,
         'height' => $height
     ]);

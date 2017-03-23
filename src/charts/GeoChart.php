@@ -1,5 +1,5 @@
 <?php
-    $popularity = $lava->DataTable();
+    $popularity = \Lava::DataTable();
     $popularity->addStringColumn('Country')
                ->addNumberColumn('Popularity')
                ->addRow(['Germany', 200])
@@ -9,7 +9,7 @@
                ->addRow(['France', 600])
                ->addRow(['RU', 700]);
 
-    $lava->GeoChart($title, $popularity, [
+    \Lava::GeoChart($title, $popularity, [
         'width' => $width,
         'height' => $height
     ]);

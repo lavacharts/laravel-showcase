@@ -1,5 +1,5 @@
 <?php
-    $finances = $lava->DataTable();
+    $finances = \Lava::DataTable();
     $finances->addColumn('date', 'Year')
              ->addColumn('number', 'Sales')
              ->addColumn('number', 'Expenses')
@@ -9,10 +9,8 @@
              ->addRow(['2006', 660, 1120])
              ->addRow(['2007', 1030, 54]);
 
-    $lava->ColumnChart($title, $finances, [
+    \Lava::ColumnChart($title, $finances, [
         'title' => 'Company Performance',
-        'width' => $width,
-        'height' => $height,
         'titleTextStyle' => [
             'color' => '#eb6b2c',
             'fontSize' => 14

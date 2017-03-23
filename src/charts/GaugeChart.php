@@ -1,14 +1,12 @@
 <?php
-    $temps = $lava->DataTable();
+    $temps = \Lava::DataTable();
     $temps->addStringColumn('Type')
           ->addNumberColumn('Value')
           ->addRow(['CPU', rand(0,100)])
           ->addRow(['Case', rand(0,100)])
           ->addRow(['Graphics', rand(0,100)]);
 
-    $lava->GaugeChart($title, $temps, [
-        'width' => $width,
-        'height' => $height,
+    \Lava::GaugeChart($title, $temps, [
         'greenFrom' => 0,
         'greenTo' => 69,
         'yellowFrom' => 70,
